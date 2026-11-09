@@ -111,4 +111,27 @@ view.addEventListener("click",e=>{let c=e.target.closest("[data-open]");if(c)ope
 $("menubtn").onclick=()=>$("side").classList.toggle("open");
 $("search").addEventListener("input",e=>{let q=e.target.value.trim().toLowerCase();if(!q){home();return}header("Search results","Matching topics in your study library.");let hits=S.flatMap(s=>s.topics.map((t,i)=>({s:s.name,t,i})).filter(x=>(x.s+" "+x.t[0]+" "+x.t[1]).toLowerCase().includes(q)));view.innerHTML=hits.length?`<div class="topiclist">${hits.map(x=>`<div class="topic"><div><b>${x.t[0]}</b><small>${x.s}</small></div><button class="btn" onclick="openSubject('${x.s}')">Open subject</button></div>`).join("")}</div>`:`<div class="panel"><p class="subtitle">No matches. Try another keyword.</p></div>`});
 home();
+
+async function loadPublishedStudyNotes(){
+  try{
+    const response=await fetch("./study-notes.json",{cache:"no-store"});
+    if(!response.ok) return;
+    const data=await response.json();
+    const notes=Array.isArray(data.notes)?data.notes:[];
+    let added=0;
+    notes.forEach(note=>{
+      if(!note || typeof note.title!=="string" || typeof note.content!=="string" || !note.title.trim() || !note.content.trim()) return;
+      const subject=S.find(item=>item.name.toLowerCase()===String(note.subject||"").toLowerCase());
+      if(!subject) return;
+      if(subject.topics.some(topic=>topic[0]===note.title)) return;
+      subject.topics.push([note.title,note.content,note.keyPoints||"Review the definition, main features and clinical or practical importance."]);
+      added++;
+    });
+    $("subjectnav").innerHTML=S.map(subject=>`<button data-sub="${subject.name}"><span class="navico">${subject.icon}</span>${subject.name}</button>`).join("");
+    if(added) home();
+  }catch(error){
+    console.warn("MedAtlas published notes could not be loaded:",error);
+  }
+}
+loadPublishedStudyNotes();
 </script></body></html>
