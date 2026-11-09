@@ -187,7 +187,7 @@ async function anatomyFolder(id){
 }
 async function anatomyTopic(folderId,topicId,tab){
  $("side").classList.remove("open");
- const d=await anatomyLoad(),f=d.folders.find(x=>x.id===folderId),t=f?.topics.find(x=>x.id===topicId);if(!t)return;
+ const d=await anatomyLoad(),f=d.folders.find(x=>x.id===folderId);let t=null;if(folderId==="systemic"){for(const sec of (f?.sections||[])){const found=sec.topics.find(x=>x.id===topicId);if(found){t=found;anatomyActiveSection=sec.id;break;}}}else{t=f?.topics.find(x=>x.id===topicId);}if(!t)return;
  anatomyActiveFolder=folderId;anatomyActiveTopic=topicId;anatomyActiveTab=tab||(folderId==="regional"?"detailed":"viva");
  header(t.title,f.name+" · "+t.system);
  const isRegional=folderId==="regional";
