@@ -27,6 +27,30 @@ header{display:flex;justify-content:space-between;align-items:center;gap:15px;ma
 .lesson{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(17px,3vw,28px);box-shadow:var(--shadow);max-width:900px}.lesson h2{font-size:23px;letter-spacing:-.7px;color:var(--espresso);margin:7px 0 12px}.lesson h3{font-size:15px;color:var(--brown);margin:22px 0 8px}.lesson p,.lesson li{font-size:13px;line-height:1.75;color:#62564c}.lesson ul,.lesson ol{padding-left:21px}.keybox{background:#f1e8de;border-left:3px solid var(--brown);border-radius:0 12px 12px 0;padding:13px 15px;margin:15px 0;font-size:12px;line-height:1.65;color:#59483b}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:12px;margin:12px 0}td,th{padding:10px;border:1px solid var(--line);text-align:left}th{background:#f0e7dc;color:var(--espresso)}.quizopt{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;background:white;border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:12px}.quizopt.correct{background:#edf5ed;border-color:#7b9b70}.quizopt.wrong{background:#f9eeee;border-color:#c78c82}.notice{margin-top:27px;padding-top:15px;border-top:1px solid var(--line);font-size:10px;color:#91857a;line-height:1.6}.mobilemenu{display:none;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 10px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}aside{position:fixed;z-index:10;left:-270px;width:248px;transition:left .2s;box-shadow:var(--shadow)}aside.open{left:0}.mobilemenu{display:block}main{padding-top:20px}}
 @media(max-width:650px){header{align-items:flex-start}.headright{gap:5px}.search{width:38vw}.avatar{display:none}.stats{gap:7px}.stat{padding:12px}.stat strong{font-size:21px}.grid{grid-template-columns:1fr}.subjects{gap:8px}.subject{padding:13px}.hero{padding:23px}.topic{align-items:flex-start}.topicactions{flex-direction:column}.sectionhead{margin-top:23px}}
+
+.anat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.anat-folder{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow)}
+.anat-folder:hover{border-color:var(--taupe);transform:translateY(-2px)}
+.anat-folder .subjecticon{margin-bottom:10px}.anat-folder h3{margin:0 0 7px;color:var(--espresso);font-size:17px}.anat-folder p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}
+.anat-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.anat-tabs button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:10px 13px;color:var(--brown);font-size:11px;font-weight:750}
+.anat-tabs button.active{background:var(--espresso);color:var(--cream);border-color:var(--espresso)}
+.anat-topic{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin:9px 0}
+.anat-topic button{border:1px solid var(--line);background:#f8f3ed;color:var(--brown);border-radius:9px;padding:8px 11px;font-size:10px;font-weight:750}
+.anat-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.anat-field{background:#fbf8f3;border:1px solid var(--line);border-radius:13px;padding:13px}
+.anat-field b{display:block;color:var(--brown);font-size:11px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.anat-field p{margin:0;font-size:12px;line-height:1.7;color:#62564c}
+.anat-diagram{background:#fbf8f3;border:1px solid var(--line);border-radius:15px;padding:14px;margin:15px 0;overflow:hidden}
+.anat-diagram svg{width:100%;height:auto;max-height:330px}
+.anat-question{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0}
+.anat-question h4{margin:0 0 10px;font-size:13px;line-height:1.5}
+.anat-option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:white;border-radius:9px;padding:10px;margin:6px 0;font-size:11px;color:var(--ink)}
+.anat-option.good{background:#edf5ed;border-color:#7b9b70}.anat-option.bad{background:#f9eeee;border-color:#c78c82}
+.anat-explain{font-size:11px;line-height:1.6;color:var(--muted);margin:9px 0 0}
+.anat-prose{font-size:13px;line-height:1.8;color:#62564c;white-space:normal}
+.anat-prose p{margin:0 0 12px}.anat-prose strong{color:var(--espresso)}
+@media(max-width:650px){.anat-grid,.anat-fields{grid-template-columns:1fr}.anat-topic{align-items:flex-start;flex-direction:column}}
 </style></head>
 <body><div class="layout">
 <aside id="side"><div class="brand"><div class="mark">✚</div>MedAtlas</div>
@@ -106,7 +130,7 @@ function page(p){document.querySelectorAll("[data-page]").forEach(b=>b.classList
 function bookmark(e){let k=decodeURIComponent(e);saved=saved.includes(k)?saved.filter(x=>x!==k):[...saved,k];localStorage.setItem("ma-saved",JSON.stringify(saved));if(view.querySelector(".lesson"))lesson(encodeURIComponent(current),S.find(x=>x.name===current).topics.findIndex(t=>current+"|"+t[0]===k));else openSubject(current)}
 function complete(e){let k=decodeURIComponent(e);done=done.includes(k)?done.filter(x=>x!==k):[...done,k];localStorage.setItem("ma-done",JSON.stringify(done));lesson(encodeURIComponent(current),S.find(x=>x.name===current).topics.findIndex(t=>current+"|"+t[0]===k))}
 document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>page(b.dataset.page)));
-$("subjectnav").addEventListener("click",e=>{let b=e.target.closest("[data-sub]");if(b)openSubject(b.dataset.sub)});
+$("subjectnav").addEventListener("click",e=>{let b=e.target.closest("[data-sub]");if(b){if(b.dataset.sub==="Anatomy")anatomyHome();else openSubject(b.dataset.sub)}});
 view.addEventListener("click",e=>{let c=e.target.closest("[data-open]");if(c)openSubject(c.dataset.open)});
 $("menubtn").onclick=()=>$("side").classList.toggle("open");
 $("search").addEventListener("input",e=>{let q=e.target.value.trim().toLowerCase();if(!q){home();return}header("Search results","Matching topics in your study library.");let hits=S.flatMap(s=>s.topics.map((t,i)=>({s:s.name,t,i})).filter(x=>(x.s+" "+x.t[0]+" "+x.t[1]).toLowerCase().includes(q)));view.innerHTML=hits.length?`<div class="topiclist">${hits.map(x=>`<div class="topic"><div><b>${x.t[0]}</b><small>${x.s}</small></div><button class="btn" onclick="openSubject('${x.s}')">Open subject</button></div>`).join("")}</div>`:`<div class="panel"><p class="subtitle">No matches. Try another keyword.</p></div>`});
@@ -134,4 +158,40 @@ async function loadPublishedStudyNotes(){
   }
 }
 loadPublishedStudyNotes();
+
+let anatomyLibrary=null, anatomyActiveFolder="systemic", anatomyActiveTopic=null, anatomyActiveTab="viva", anatomyQuizState={};
+function aEsc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function aMd(v){return String(v??"").split("\n\n").map(p=>"<p>"+aEsc(p).replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>")+"</p>").join("")}
+async function anatomyLoad(){if(anatomyLibrary)return anatomyLibrary;const r=await fetch("./anatomy-library.json",{cache:"no-store"});if(!r.ok)throw new Error("Anatomy library unavailable");anatomyLibrary=await r.json();return anatomyLibrary}
+async function anatomyHome(){
+ header("Anatomy","Choose your study approach: systemic understanding or Indian MBBS regional dissection.");
+ try{const d=await anatomyLoad();view.innerHTML='<div class="kicker">ANATOMY LIBRARY</div><div class="anat-grid">'+d.folders.map(f=>'<article class="anat-folder" onclick="anatomyFolder(\''+f.id+'\')"><div class="subjecticon">'+(f.id==="systemic"?"🫀":"🦴")+'</div><h3>'+aEsc(f.name)+'</h3><p>'+aEsc(f.description)+'</p><p style="margin-top:12px;font-weight:750;color:var(--brown)">'+f.topics.length+' starter topics · Open folder →</p></article>').join("")+'</div><div class="panel"><b>How the library is organized</b><p class="subtitle" style="margin-top:7px">Every topic has your structured viva answer, deeper explanations, original diagrams and difficult applied questions. Regional anatomy follows the Indian MBBS dissection sequence and clinical emphasis.</p></div>'}
+ catch(e){view.innerHTML='<div class="panel">Could not load the anatomy library. Refresh the page and try again.</div>'}
+}
+async function anatomyFolder(id){
+ const d=await anatomyLoad(),f=d.folders.find(x=>x.id===id);if(!f)return;anatomyActiveFolder=id;
+ header(f.name,f.description);
+ view.innerHTML='<div class="anat-tabs"><button onclick="anatomyHome()">← Anatomy folders</button></div><div class="sectionhead"><h3>'+aEsc(f.name)+'</h3><span class="subtitle">'+f.topics.length+' topics available</span></div><div class="topiclist">'+f.topics.map(t=>'<div class="anat-topic"><div><b>'+aEsc(t.title)+'</b><small>'+aEsc(t.system)+' · Viva · Detailed · Quiz</small></div><button onclick="anatomyTopic(\''+id+'\',\''+t.id+'\',\'viva\')">Open topic →</button></div>').join("")+'</div><div class="keybox">'+(id==="regional"?"Regional sequence is aligned to the Indian MBBS approach: region, boundaries, layers, contents, relations, blood supply, nerve supply, surface anatomy and clinical correlations.":"Systemic sequence emphasizes organs, development where relevant, structure, function, vessels, nerves and clinical correlations.")+'</div>';
+}
+async function anatomyTopic(folderId,topicId,tab){
+ const d=await anatomyLoad(),f=d.folders.find(x=>x.id===folderId),t=f?.topics.find(x=>x.id===topicId);if(!t)return;
+ anatomyActiveFolder=folderId;anatomyActiveTopic=topicId;anatomyActiveTab=tab||"viva";
+ header(t.title,f.name+" · "+t.system);
+ const tabs=[["viva","Viva Format Notes"],["detailed","Detailed Notes"],["quiz","Advanced Quiz"]];
+ let body="";
+ if(anatomyActiveTab==="viva"){
+  const labels=[["name","Name"],["organSystem","Organ system"],["function","Function"],["holotopy","Holotopy"],["syntopy","Syntopy"],["skeletopy","Skeletopy"],["externalStructure","External structure"],["internalStructure","Internal structure"]];
+  body='<div class="anat-fields">'+labels.map(([k,l])=>'<section class="anat-field"><b>'+l+'</b><p>'+aEsc(t.viva[k])+'</p></section>').join("")+'</div>';
+ }else if(anatomyActiveTab==="detailed"){
+  body='<article class="lesson"><div class="anat-prose">'+aMd(t.detailed)+'</div><div class="anat-diagram"><b>Original schematic diagram</b>'+t.diagram+'</div><h3>Suggested reference books</h3><ul>'+t.references.map(r=>'<li>'+aEsc(r)+'</li>').join("")+'</ul><p class="subtitle">These are original explanatory notes. Consult the cited textbooks and your department's prescribed edition for full dissection detail.</p></article>';
+ }else{
+  const key=folderId+"|"+topicId,answers=anatomyQuizState[key]||{};
+  const score=t.quiz.reduce((n,q,i)=>n+(answers[i]===q.answer?1:0),0);
+  body='<div class="panel"><b>Advanced applied anatomy quiz</b><p class="subtitle">Questions test spatial relations, clinical application and structural reasoning. Score: '+score+' / '+t.quiz.length+' answered correctly.</p></div>'+t.quiz.map((q,i)=>{const chosen=answers[i];return '<section class="anat-question"><h4>Q'+(i+1)+'. '+aEsc(q.q)+'</h4>'+q.options.map((o,j)=>'<button class="anat-option '+(chosen!==undefined&&j===q.answer?"good":chosen===j&&j!==q.answer?"bad":"")+'" '+(chosen!==undefined?"disabled":"")+' onclick="anatomyAnswer(\''+folderId+'\',\''+topicId+'\','+i+','+j+')">'+String.fromCharCode(65+j)+'. '+aEsc(o)+'</button>').join("")+(chosen!==undefined?'<p class="anat-explain">'+(chosen===q.answer?"Correct. ":"Not correct. ")+aEsc(q.why)+'</p>':"")+'</section>'}).join("")+'<button class="btn outline" onclick="anatomyQuizReset(\''+folderId+'\',\''+topicId+'\')">Reset quiz</button>';
+ }
+ view.innerHTML='<div class="anat-tabs"><button onclick="anatomyFolder(\''+folderId+'\')">← Topics</button>'+tabs.map(([id,label])=>'<button class="'+(anatomyActiveTab===id?"active":"")+'" onclick="anatomyTopic(\''+folderId+'\',\''+topicId+'\',\''+id+'\')">'+label+'</button>').join("")+'</div><div class="sectionhead"><h3>'+aEsc(t.title)+'</h3><span class="subtitle">'+aEsc(t.system)+'</span></div>'+body+'<p class="notice">Study reference: '+t.references.map(aEsc).join(" · ")+'</p>';
+}
+function anatomyAnswer(folderId,topicId,qi,choice){const key=folderId+"|"+topicId;anatomyQuizState[key]=anatomyQuizState[key]||{};anatomyQuizState[key][qi]=choice;anatomyTopic(folderId,topicId,"quiz")}
+function anatomyQuizReset(folderId,topicId){delete anatomyQuizState[folderId+"|"+topicId];anatomyTopic(folderId,topicId,"quiz")}
+
 </script></body></html>
