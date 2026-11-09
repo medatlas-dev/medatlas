@@ -1,0 +1,11 @@
+{
+  "notes": [
+    {
+      "subject": "Microbiology",
+      "title": "Gram staining: steps and interpretation",
+      "content": "Gram staining is a differential staining method used to separate many bacteria into Gram-positive and Gram-negative groups according to differences in their cell walls. First, prepare a thin bacterial smear, allow it to air-dry and heat-fix it. Flood the smear with crystal violet (primary stain), then add Gram's iodine (mordant), which helps form a crystal violet–iodine complex. Wash briefly with an appropriate decolorizer, such as alcohol or acetone-alcohol. Finally, apply safranin (counterstain), rinse and examine under the microscope using the oil-immersion objective. Gram-positive bacteria usually remain purple because their thick peptidoglycan layer retains the primary-stain complex. Gram-negative bacteria are decolorized and take up safranin, appearing pink or red because they have a thin peptidoglycan layer and an outer membrane. Over-decolorization, under-decolorization, old cultures and a thick smear can produce misleading results.",
+      "keyPoints": "Order: crystal violet → iodine → decolorizer → safranin. Gram-positive = purple; Gram-negative = pink/red. The cell-wall structure explains the difference. This is a study summary; follow your laboratory manual for exact timing and technique.",
+      "date": "2026-11-09"
+    }
+  ]
+}
