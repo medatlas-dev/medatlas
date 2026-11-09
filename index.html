@@ -183,7 +183,7 @@ async function anatomyTopic(folderId,topicId,tab){
   const labels=[["name","Name"],["organSystem","Organ system"],["function","Function"],["holotopy","Holotopy"],["syntopy","Syntopy"],["skeletopy","Skeletopy"],["externalStructure","External structure"],["internalStructure","Internal structure"]];
   body='<div class="anat-fields">'+labels.map(([k,l])=>'<section class="anat-field"><b>'+l+'</b><p>'+aEsc(t.viva[k])+'</p></section>').join("")+'</div>';
  }else if(anatomyActiveTab==="detailed"){
-  body='<article class="lesson"><div class="anat-prose">'+aMd(t.detailed)+'</div><div class="anat-diagram"><b>Original schematic diagram</b>'+t.diagram+'</div><h3>Suggested reference books</h3><ul>'+t.references.map(r=>'<li>'+aEsc(r)+'</li>').join("")+'</ul><p class="subtitle">These are original explanatory notes. Consult the cited textbooks and your department's prescribed edition for full dissection detail.</p></article>';
+  body='<article class="lesson"><div class="anat-prose">'+aMd(t.detailed)+'</div><div class="anat-diagram"><b>Original schematic diagram</b>'+t.diagram+'</div><h3>Suggested reference books</h3><ul>'+t.references.map(r=>'<li>'+aEsc(r)+'</li>').join("")+'</ul><p class="subtitle">These are original explanatory notes. Consult the cited textbooks and the prescribed edition for full dissection detail.</p></article>';
  }else{
   const key=folderId+"|"+topicId,answers=anatomyQuizState[key]||{};
   const score=t.quiz.reduce((n,q,i)=>n+(answers[i]===q.answer?1:0),0);
