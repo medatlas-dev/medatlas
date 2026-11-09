@@ -159,18 +159,28 @@ async function loadPublishedStudyNotes(){
 }
 loadPublishedStudyNotes();
 
-let anatomyLibrary=null, anatomyActiveFolder="systemic", anatomyActiveTopic=null, anatomyActiveTab="viva", anatomyQuizState={};
+let anatomyLibrary=null, anatomyActiveFolder="systemic", anatomyActiveTopic=null, anatomyActiveSection=null, anatomyActiveTab="detailed", anatomyQuizState={};
 function aEsc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function aMd(v){return String(v??"").split("\n\n").map(p=>"<p>"+aEsc(p).replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>")+"</p>").join("")}
 async function anatomyLoad(){if(anatomyLibrary)return anatomyLibrary;const r=await fetch("./anatomy-library.json",{cache:"no-store"});if(!r.ok)throw new Error("Anatomy library unavailable");anatomyLibrary=await r.json();return anatomyLibrary}
 async function anatomyHome(){
  $("side").classList.remove("open");
- header("Anatomy","Choose your study approach: systemic understanding or Indian MBBS regional dissection.");
- try{const d=await anatomyLoad();view.innerHTML='<div class="kicker">ANATOMY LIBRARY</div><div class="anat-grid">'+d.folders.map(f=>'<article class="anat-folder" onclick="anatomyFolder(\''+f.id+'\')"><div class="subjecticon">'+(f.id==="systemic"?"🫀":"🦴")+'</div><h3>'+aEsc(f.name)+'</h3><p>'+aEsc(f.description)+'</p><p style="margin-top:12px;font-weight:750;color:var(--brown)">'+f.topics.length+' starter topics · Open folder →</p></article>').join("")+'</div><div class="panel"><b>How the library is organized</b><p class="subtitle" style="margin-top:7px">Every topic has your structured viva answer, deeper explanations, original diagrams and difficult applied questions. Regional anatomy follows the Indian MBBS dissection sequence and clinical emphasis.</p></div>'}
- catch(e){view.innerHTML='<div class="panel">Could not load the anatomy library. Refresh the page and try again.</div>'}
+ header("Anatomy","Choose a systemic division or study regional anatomy in the Indian MBBS dissection style.");
+ try{
+  const d=await anatomyLoad(),s=d.folders.find(x=>x.id==="systemic"),r=d.folders.find(x=>x.id==="regional");
+  view.innerHTML='<div class="kicker">SYSTEMIC ANATOMY · THREE STUDY DIVISIONS</div><div class="anat-grid">'+s.sections.map(sec=>'<article class="anat-folder" onclick="anatomySection(\''+sec.id+'\')"><div class="subjecticon">📚</div><h3>'+aEsc(sec.name)+'</h3><p>'+aEsc(sec.description)+'</p><p style="margin-top:12px;font-weight:750;color:var(--brown)">'+sec.topics.length+' individual chapters · Open →</p></article>').join("")+'</div><div class="sectionhead"><h3>Regional Anatomy</h3></div><article class="anat-folder" onclick="anatomyFolder(\'regional\')"><div class="subjecticon">🦴</div><h3>Regional Anatomy</h3><p>'+aEsc(r.description)+'</p><p style="margin-top:12px;font-weight:750;color:var(--brown)">'+r.topics.length+' regional chapters · Open →</p></article>';
+ }catch(e){view.innerHTML='<div class="panel">Could not load the anatomy library. Refresh and try again.</div>'}
+}
+async function anatomySection(sectionId){
+ $("side").classList.remove("open");
+ const d=await anatomyLoad(),s=d.folders.find(x=>x.id==="systemic"),sec=s.sections.find(x=>x.id===sectionId);if(!sec)return;
+ anatomyActiveFolder="systemic";anatomyActiveSection=sectionId;
+ header(sec.name,sec.description);
+ view.innerHTML='<div class="anat-tabs"><button onclick="anatomyHome()">← Anatomy divisions</button></div><div class="sectionhead"><h3>'+aEsc(sec.name)+'</h3><span class="subtitle">'+sec.topics.length+' chapters</span></div><div class="topiclist">'+sec.topics.map(t=>'<div class="anat-topic"><div><b>'+aEsc(t.title)+'</b><small>'+aEsc(t.system)+' · Full chapter · Applied anatomy</small></div><button onclick="anatomyTopic(\'systemic\',\''+t.id+'\',\'detailed\')">Open chapter →</button></div>').join("")+'</div>';
 }
 async function anatomyFolder(id){
  $("side").classList.remove("open");
+ if(id==="systemic"){if(anatomyActiveSection) return anatomySection(anatomyActiveSection);return anatomyHome();}
  const d=await anatomyLoad(),f=d.folders.find(x=>x.id===id);if(!f)return;anatomyActiveFolder=id;
  header(f.name,f.description);
  view.innerHTML='<div class="anat-tabs"><button onclick="anatomyHome()">← Anatomy folders</button></div><div class="sectionhead"><h3>'+aEsc(f.name)+'</h3><span class="subtitle">'+f.topics.length+' topics available</span></div><div class="topiclist">'+f.topics.map(t=>'<div class="anat-topic"><div><b>'+aEsc(t.title)+'</b><small>'+aEsc(t.system)+' · Viva · Detailed · Quiz</small></div><button onclick="anatomyTopic(\''+id+'\',\''+t.id+'\',\'viva\')">Open topic →</button></div>').join("")+'</div><div class="keybox">'+(id==="regional"?"Regional sequence is aligned to the Indian MBBS approach: region, boundaries, layers, contents, relations, blood supply, nerve supply, surface anatomy and clinical correlations.":"Systemic sequence emphasizes organs, development where relevant, structure, function, vessels, nerves and clinical correlations.")+'</div>';
@@ -178,9 +188,10 @@ async function anatomyFolder(id){
 async function anatomyTopic(folderId,topicId,tab){
  $("side").classList.remove("open");
  const d=await anatomyLoad(),f=d.folders.find(x=>x.id===folderId),t=f?.topics.find(x=>x.id===topicId);if(!t)return;
- anatomyActiveFolder=folderId;anatomyActiveTopic=topicId;anatomyActiveTab=tab||"viva";
+ anatomyActiveFolder=folderId;anatomyActiveTopic=topicId;anatomyActiveTab=tab||(folderId==="regional"?"detailed":"viva");
  header(t.title,f.name+" · "+t.system);
- const tabs=[["viva","Viva Format Notes"],["detailed","Detailed Notes"],["quiz","Advanced Quiz"]];
+ const isRegional=folderId==="regional";
+ const tabs=isRegional?[["detailed","Regional Chapter"],["quiz","Advanced Quiz"]]:[["viva","Viva Format Notes"],["detailed","Detailed Notes"],["quiz","Advanced Quiz"]];
  let body="";
  if(anatomyActiveTab==="viva"){
   const labels=[["name","Name"],["organSystem","Organ system"],["function","Function"],["holotopy","Holotopy"],["syntopy","Syntopy"],["skeletopy","Skeletopy"],["externalStructure","External structure"],["internalStructure","Internal structure"]];
