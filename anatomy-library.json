@@ -83,7 +83,10 @@
           "references": [
             "B.D. Chaurasia, Human Anatomy, Volume 2: Abdomen and Pelvis (regional cross-reference)",
             "Vishram Singh, Textbook of Anatomy, abdomen and lower limb",
-            "OpenStax Anatomy & Physiology, digestive system overview"
+            "OpenStax Anatomy & Physiology, digestive system overview",
+            "Netter's Atlas of Human Anatomy (visual cross-check; original diagrams here are independently drawn)",
+            "Gray's Anatomy for Students (regional relations and clinical context)",
+            "Moore's Clinically Oriented Anatomy / Snell's Clinical Anatomy by Regions (applied correlations)"
           ]
         },
         {
@@ -162,7 +165,10 @@
           "references": [
             "B.D. Chaurasia, Human Anatomy, Volume 1: Thorax (regional cross-reference)",
             "Vishram Singh, Textbook of Anatomy, Upper Limb and Thorax",
-            "OpenStax Anatomy & Physiology, respiratory system overview"
+            "OpenStax Anatomy & Physiology, respiratory system overview",
+            "Netter's Atlas of Human Anatomy (visual cross-check; original diagrams here are independently drawn)",
+            "Gray's Anatomy for Students (regional relations and clinical context)",
+            "Moore's Clinically Oriented Anatomy / Snell's Clinical Anatomy by Regions (applied correlations)"
           ]
         }
       ]
@@ -237,7 +243,10 @@
           "references": [
             "B.D. Chaurasia, Human Anatomy, Volume 1: Thorax",
             "Cunningham's Manual of Practical Anatomy, Thorax",
-            "NMC competency-based undergraduate curriculum for Anatomy"
+            "NMC competency-based undergraduate curriculum for Anatomy",
+            "Netter's Atlas of Human Anatomy (visual cross-check; original diagrams here are independently drawn)",
+            "Gray's Anatomy for Students (regional relations and clinical context)",
+            "Moore's Clinically Oriented Anatomy / Snell's Clinical Anatomy by Regions (applied correlations)"
           ]
         },
         {
@@ -305,11 +314,14 @@
           "references": [
             "B.D. Chaurasia, Human Anatomy, Volume 2: Abdomen and Pelvis",
             "Vishram Singh, Textbook of Anatomy, Abdomen and Lower Limb",
-            "NMC competency-based undergraduate curriculum for Anatomy"
+            "NMC competency-based undergraduate curriculum for Anatomy",
+            "Netter's Atlas of Human Anatomy (visual cross-check; original diagrams here are independently drawn)",
+            "Gray's Anatomy for Students (regional relations and clinical context)",
+            "Moore's Clinically Oriented Anatomy / Snell's Clinical Anatomy by Regions (applied correlations)"
           ]
         }
       ]
     }
   ],
-  "sourcePolicy": "Notes are independently written summaries, not reproductions of textbook passages or atlas plates. Use Netter's Atlas for visual cross-checking, B.D. Chaurasia and Vishram Singh for Indian regional/dissection emphasis, Cunningham's Manual for dissection sequence, and Gray's/Snell's for deeper relations and clinical correlation. Original simplified diagrams are used here; no copyrighted atlas plates are copied."
+  "sourcePolicy": "Notes are independently written summaries, not reproductions of textbook passages or atlas plates. Use B.D. Chaurasia and Vishram Singh for Indian MBBS regional/dissection emphasis; Cunningham's Manual for dissection sequence; Netter's Atlas for visual cross-checking; and Gray's Anatomy for Students, Moore's Clinically Oriented Anatomy and Snell's Clinical Anatomy by Regions for deeper relations and clinical correlation. Original simplified diagrams are used here; no copyrighted atlas plates are copied. The regional topic sequence will be checked against the NMC CBME Anatomy competencies."
 }
