@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "approach": "Original study notes written for MBBS learning. Systemic anatomy builds organ-system understanding; regional anatomy follows the Indian MBBS dissection and applied-anatomy approach.",
+  "folders": [
+    {
+      "id": "systemic",
+      "name": "Systemic Anatomy",
+      "description": "Study each organ system as a functional whole.",
+      "topics": [
+        {
+          "id": "digestive-tract",
+          "title": "Digestive System: stomach and duodenum",
+          "system": "Digestive system",
+          "viva": {
+            "name": "Stomach and duodenum",
+            "organSystem": "Digestive system",
+            "function": "The stomach stores food, mixes it with gastric secretions and begins protein digestion. The duodenum receives chyme, bile and pancreatic juice; it neutralizes gastric acid and is a major site of chemical digestion.",
+            "holotopy": "The stomach lies mainly in the epigastric and left hypochondriac regions, with variable extension into the umbilical region. The duodenum lies in the upper abdomen, mostly in the epigastric and umbilical regions; most of it is secondarily retroperitoneal.",
+            "syntopy": "Stomach: anteriorly related to the left lobe of liver, diaphragm and anterior abdominal wall; posteriorly to the lesser sac and stomach bed (including pancreas, left kidney, left suprarenal gland, spleen, splenic artery, transverse mesocolon and diaphragm). Duodenum: first part is related to liver and gallbladder; second part is related to the right kidney and receives bile and pancreatic ducts; third part is crossed anteriorly by the superior mesenteric vessels and lies anterior to the aorta and IVC; fourth part ascends to the duodenojejunal flexure.",
+            "skeletopy": "The stomach position varies with posture and filling; its cardia is approximately at T11, the pylorus near the transpyloric plane (L1) in the supine adult. The duodenum begins near L1; its horizontal part crosses around L3; the duodenojejunal flexure is commonly left of L2.",
+            "externalStructure": "The stomach has cardia, fundus, body and pyloric part (pyloric antrum, canal and pylorus), anterior and posterior surfaces, and greater and lesser curvatures. The duodenum is C-shaped and has superior, descending, horizontal and ascending parts.",
+            "internalStructure": "The stomach mucosa forms rugae and contains gastric pits and glands; the muscular wall has inner oblique, middle circular and outer longitudinal layers. The pyloric circular muscle thickens to form the sphincter. The duodenal mucosa has circular folds and villi; submucosal Brunner glands are characteristic, especially proximally."
+          },
+          "detailed": "**Stomach — form and parts.** The stomach is a J-shaped, intraperitoneal dilatation between the oesophagus and duodenum. Identify the cardia, fundus, body and pyloric part. The pyloric part is subdivided into antrum and canal and ends at the pylorus. The lesser curvature forms the right border and gives attachment to the lesser omentum; the greater curvature forms the left and inferior border and gives attachment to the greater omentum. The fundus commonly contains a gastric air bubble.\n\n**Peritoneal relations and stomach bed.** The stomach is covered by peritoneum except along attachment lines. The lesser sac lies posterior to it. The stomach bed is the group of structures behind the lesser sac: diaphragm, spleen, left kidney, left suprarenal gland, pancreas, splenic artery and transverse mesocolon/colon. The exact list can vary slightly by textbook description; learn the standard list and understand the spatial arrangement.\n\n**Blood supply.** The lesser curvature is supplied by right and left gastric arteries; the greater curvature by right and left gastro-omental (gastroepiploic) arteries; the fundus by short gastric arteries. These vessels arise from the coeliac trunk system. Veins generally accompany arteries and drain into the portal venous system.\n\n**Lymph and nerves.** Lymph follows the arteries to gastric and coeliac nodes. Parasympathetic supply is via anterior and posterior vagal trunks; sympathetic fibres reach the stomach through the coeliac plexus. Vagal activity generally promotes motility and secretion; sympathetic activity generally reduces motility and constricts vessels.\n\n**Duodenum.** The first part begins at the pylorus; its proximal short segment is relatively mobile and intraperitoneal, while most of the duodenum is fixed retroperitoneally. The descending part contains the major duodenal papilla, where the hepatopancreatic ampulla usually opens. The horizontal part passes anterior to the aorta and IVC and posterior to the superior mesenteric vessels. The ascending part ends at the duodenojejunal flexure, supported by the suspensory muscle of duodenum (ligament of Treitz).\n\n**Blood supply and clinical anatomy.** The proximal duodenum receives superior pancreaticoduodenal branches from the gastroduodenal artery; the distal part receives inferior pancreaticoduodenal branches from the superior mesenteric artery. This is an important anastomosis between coeliac and superior mesenteric arterial territories. A posterior duodenal ulcer may erode the gastroduodenal artery; an anterior ulcer may perforate into the peritoneal cavity. The third part can be compressed between the superior mesenteric artery and aorta in superior mesenteric artery syndrome.\n\n**Exam distinctions.** The stomach is intraperitoneal and mobile; most of the duodenum is secondarily retroperitoneal and fixed. Brunner glands are a key histological feature of the duodenum. The major papilla is in the descending part, not the first part.",
+          "diagram": "<svg viewBox='0 0 640 300' role='img' aria-label='Schematic stomach and four parts of duodenum'><path d='M180 48 C120 55 115 125 150 158 C180 185 245 176 280 145 C305 122 290 80 260 62 C235 48 210 45 180 48Z' fill='#e8c4a5' stroke='#6e473b' stroke-width='4'/><path d='M280 145 C330 155 350 190 345 218 C340 245 375 258 415 250 C450 243 462 220 450 200' fill='none' stroke='#b77c50' stroke-width='24' stroke-linecap='round'/><path d='M345 218 L345 270 L450 270' fill='none' stroke='#b77c50' stroke-width='24' stroke-linecap='round'/><path d='M450 200 L450 95' fill='none' stroke='#b77c50' stroke-width='24' stroke-linecap='round'/><path d='M450 95 L405 95' fill='none' stroke='#b77c50' stroke-width='24' stroke-linecap='round'/><g fill='#291c0e' font-size='15' font-weight='600'><text x='170' y='120'>Stomach</text><text x='300' y='180'>1st</text><text x='360' y='245'>2nd</text><text x='365' y='290'>3rd</text><text x='465' y='105'>4th</text></g><g stroke='#6e473b' stroke-width='2' fill='none'><path d='M200 45 L200 20 L160 20'/><path d='M450 200 L510 185'/></g><g fill='#6e473b' font-size='13'><text x='80' y='24'>Fundus / body</text><text x='515' y='185'>Duodenum</text></g></svg>",
+          "quiz": [
+            {
+              "q": "A posterior ulcer in the first part of the duodenum causes sudden severe upper GI bleeding. Which artery is most at risk?",
+              "options": [
+                "Right gastric",
+                "Gastroduodenal",
+                "Inferior pancreaticoduodenal",
+                "Splenic"
+              ],
+              "answer": 1,
+              "why": "The gastroduodenal artery runs posterior to the proximal first part of the duodenum and may be eroded by a posterior ulcer."
+            },
+            {
+              "q": "Which part of the duodenum is crossed anteriorly by the superior mesenteric vessels?",
+              "options": [
+                "Superior",
+                "Descending",
+                "Horizontal (third)",
+                "Ascending"
+              ],
+              "answer": 2,
+              "why": "The third part passes horizontally across the midline, posterior to the SMA and SMV."
+            },
+            {
+              "q": "Which structure is characteristic of duodenal submucosa?",
+              "options": [
+                "Peyer's patches",
+                "Brunner glands",
+                "Crypts without villi",
+                "Gastric chief cells"
+              ],
+              "answer": 1,
+              "why": "Brunner glands secrete alkaline mucus and are characteristic of the duodenum."
+            },
+            {
+              "q": "The stomach bed is separated from the posterior stomach wall by which space?",
+              "options": [
+                "Greater sac",
+                "Lesser sac",
+                "Omental bursa opening",
+                "Subphrenic space only"
+              ],
+              "answer": 1,
+              "why": "The lesser sac (omental bursa) lies posterior to the stomach and anterior to much of the stomach bed."
+            },
+            {
+              "q": "The duodenojejunal flexure is usually supported by which structure?",
+              "options": [
+                "Falciform ligament",
+                "Hepatoduodenal ligament",
+                "Suspensory muscle of duodenum",
+                "Phrenicocolic ligament"
+              ],
+              "answer": 2,
+              "why": "The suspensory muscle/ligament of Treitz supports the duodenojejunal flexure."
+            }
+          ],
+          "references": [
+            "B.D. Chaurasia, Human Anatomy, Volume 2: Abdomen and Pelvis (regional cross-reference)",
+            "Vishram Singh, Textbook of Anatomy, abdomen and lower limb",
+            "OpenStax Anatomy & Physiology, digestive system overview"
+          ]
+        },
+        {
+          "id": "respiratory-lungs",
+          "title": "Respiratory System: lungs and pleura",
+          "system": "Respiratory system",
+          "viva": {
+            "name": "Lungs and pleura",
+            "organSystem": "Respiratory system",
+            "function": "The lungs conduct air to the respiratory portions and provide gas exchange across the alveolar-capillary membrane. The pleura reduces friction and helps couple lung movement to the thoracic wall through the thin fluid layer and negative intrapleural pressure.",
+            "holotopy": "The lungs occupy the right and left pleural cavities in the thorax, on either side of the mediastinum. Their apices extend into the root of the neck above the first rib; their bases rest on the diaphragm.",
+            "syntopy": "Each lung is related medially to the mediastinum and its contents. The right lung is related to the superior vena cava, azygos arch and oesophagus; the left lung is related to the heart and aortic arch/descending thoracic aorta. Inferiorly both rest on the diaphragm; laterally and anteriorly they relate to the thoracic wall.",
+            "skeletopy": "The apex rises about 2–3 cm above the medial third of the clavicle. The inferior border crosses the 6th rib at the midclavicular line, 8th rib at the midaxillary line and 10th rib near the scapular/paravertebral line during quiet respiration; the pleural reflection extends about two ribs lower (8, 10, 12). These are surface landmarks and vary with respiration and body habitus.",
+            "externalStructure": "Each lung has an apex, base, costal surface, mediastinal surface and diaphragmatic surface. The right lung usually has three lobes separated by horizontal and oblique fissures; the left has two lobes separated by an oblique fissure and has a cardiac notch and lingula. The hilum transmits the root structures.",
+            "internalStructure": "The bronchial tree branches from main bronchi to lobar and segmental bronchi, then bronchioles and respiratory bronchioles, alveolar ducts and alveoli. A bronchopulmonary segment is a surgically meaningful, pyramidal unit supplied by a segmental bronchus and accompanying pulmonary artery branch; pulmonary veins run mainly in intersegmental planes."
+          },
+          "detailed": "**Pleura.** Each lung is invested by visceral pleura, which closely covers the lung and enters fissures. Parietal pleura lines the thoracic cavity and is named costal, mediastinal, diaphragmatic and cervical (cupula) according to the surface. The pleural cavity is a potential space containing a thin film of serous fluid. The costodiaphragmatic recess is the lowest pleural recess and is important clinically for fluid accumulation and thoracocentesis.\n\n**Lung surfaces and borders.** The apex projects into the root of the neck; the base is concave and rests on the diaphragm. The costal surface is convex; the mediastinal surface bears the hilum. The anterior border of the left lung has a cardiac notch and lingula. The right lung has superior, middle and inferior lobes; the left has superior and inferior lobes.\n\n**Root of lung.** The root contains the main bronchus, pulmonary artery, superior and inferior pulmonary veins, bronchial vessels, lymphatics, lymph nodes and autonomic nerves, enclosed by a pleural sleeve. At the right hilum, the eparterial bronchus lies above the pulmonary artery; at the left, the pulmonary artery is superior to the main bronchus. A useful mnemonic for the common anterior-to-posterior relation is V-A-B (vein, artery, bronchus), while remembering that vertical relations differ by side.\n\n**Bronchopulmonary segments.** These are functionally and surgically distinct subdivisions. Each has a segmental bronchus and a branch of the pulmonary artery; veins tend to be intersegmental. Right lung commonly has 10 segments. Left lung segment count varies by convention because some segments are fused (often described as 8–10). Know the standard list used by your department.\n\n**Blood supply and innervation.** Pulmonary arteries carry deoxygenated blood for gas exchange; pulmonary veins return oxygenated blood to the left atrium. Bronchial arteries provide nutritive supply to conducting tissues. Parasympathetic vagal fibres cause bronchoconstriction and increase glandular secretion; sympathetic fibres promote bronchodilation.\n\n**Clinical anatomy.** Air in the pleural cavity causes pneumothorax and may collapse the lung. Fluid in the pleural cavity causes pleural effusion. Thoracocentesis is performed in a safe intercostal space with the needle introduced just superior to the upper border of a rib to avoid the main intercostal neurovascular bundle in the costal groove. The exact site is selected clinically with imaging and local protocol.",
+          "diagram": "<svg viewBox='0 0 640 300' role='img' aria-label='Schematic lungs and pleura'><path d='M305 35 L305 110 M305 105 L250 145 M305 105 L360 145' stroke='#6e473b' stroke-width='12' fill='none' stroke-linecap='round'/><path d='M255 92 C185 72 130 120 125 205 C120 255 185 270 245 235 C270 215 275 155 255 92Z' fill='#e7b9a9' stroke='#6e473b' stroke-width='4'/><path d='M355 92 C425 72 480 120 485 205 C490 255 425 270 365 235 C340 215 335 155 355 92Z' fill='#e7b9a9' stroke='#6e473b' stroke-width='4'/><path d='M150 175 L245 175 M365 175 L460 175' stroke='#b77c50' stroke-width='3' stroke-dasharray='6 5'/><path d='M150 175 L245 120 M365 175 L460 120' stroke='#b77c50' stroke-width='3' stroke-dasharray='6 5'/><g fill='#291c0e' font-size='15' font-weight='600'><text x='165' y='210'>Right lung</text><text x='385' y='210'>Left lung</text><text x='280' y='20'>Trachea</text><text x='270' y='285'>Mediastinum</text></g></svg>",
+          "quiz": [
+            {
+              "q": "During thoracocentesis, why is the needle generally introduced just superior to the upper border of a rib?",
+              "options": [
+                "To avoid the collateral artery only",
+                "To avoid the main intercostal neurovascular bundle in the costal groove",
+                "To avoid the sympathetic trunk",
+                "To enter the extrapleural fat"
+              ],
+              "answer": 1,
+              "why": "The main intercostal vein, artery and nerve run in the costal groove along the inferior border of the rib above."
+            },
+            {
+              "q": "Which structure is usually intersegmental rather than running centrally within a bronchopulmonary segment?",
+              "options": [
+                "Segmental bronchus",
+                "Pulmonary artery branch",
+                "Pulmonary vein",
+                "Lymphatic vessel"
+              ],
+              "answer": 2,
+              "why": "Pulmonary veins commonly run in intersegmental connective tissue planes, helping define segment boundaries."
+            },
+            {
+              "q": "Which pleural part forms the cupula over the lung apex?",
+              "options": [
+                "Costal",
+                "Mediastinal",
+                "Cervical",
+                "Diaphragmatic"
+              ],
+              "answer": 2,
+              "why": "The cervical pleura (cupula) extends into the root of the neck."
+            },
+            {
+              "q": "What is the relationship of the right eparterial bronchus?",
+              "options": [
+                "Below the pulmonary artery",
+                "Above the pulmonary artery",
+                "Anterior to the superior pulmonary vein",
+                "Within the left lung only"
+              ],
+              "answer": 1,
+              "why": "The right superior lobar (eparterial) bronchus lies above the pulmonary artery."
+            },
+            {
+              "q": "A patient has a pleural effusion. In which recess does fluid commonly collect first in an upright patient?",
+              "options": [
+                "Costomediastinal recess",
+                "Costodiaphragmatic recess",
+                "Pulmonary ligament",
+                "Cupula"
+              ],
+              "answer": 1,
+              "why": "The costodiaphragmatic recess is the lowest pleural recess in the upright position."
+            }
+          ],
+          "references": [
+            "B.D. Chaurasia, Human Anatomy, Volume 1: Thorax (regional cross-reference)",
+            "Vishram Singh, Textbook of Anatomy, Upper Limb and Thorax",
+            "OpenStax Anatomy & Physiology, respiratory system overview"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regional",
+      "name": "Regional Anatomy",
+      "description": "Indian MBBS-oriented dissection, relations, surface anatomy and applied anatomy.",
+      "topics": [
+        {
+          "id": "thorax-mediastinum",
+          "title": "Thorax: mediastinum and pleural cavities",
+          "system": "Thorax",
+          "viva": {
+            "name": "Mediastinum",
+            "organSystem": "Thoracic region; cardiovascular, respiratory and digestive structures",
+            "function": "The mediastinum is the central compartment of the thoracic cavity. It separates the two pleural sacs and provides a passage and location for the heart, great vessels, trachea, oesophagus, nerves, lymphatics and connective tissue.",
+            "holotopy": "It lies between the right and left pleural cavities, extending from the thoracic inlet superiorly to the diaphragm inferiorly, sternum anteriorly to vertebral bodies posteriorly.",
+            "syntopy": "Anterior: sternum and transversus thoracis. Posterior: thoracic vertebral bodies. Lateral: mediastinal pleura. Inferior: diaphragm. Superior: superior thoracic aperture. The pericardium divides much of the inferior mediastinum into anterior, middle and posterior parts.",
+            "skeletopy": "The transverse thoracic plane from the sternal angle to the T4–T5 intervertebral disc is the conventional boundary between superior and inferior mediastina. The inferior mediastinum extends to the diaphragm.",
+            "externalStructure": "The mediastinum is divided into superior and inferior mediastinum. The inferior mediastinum is subdivided into anterior, middle and posterior parts. The middle mediastinum contains the pericardium and heart.",
+            "internalStructure": "Superior mediastinum contains thymic remnants, brachiocephalic veins, upper SVC, arch of aorta and branches, trachea, oesophagus, thoracic duct and vagus/phrenic nerves. Middle contains heart, pericardium, roots of great vessels and main bronchi near the hilum. Posterior contains descending thoracic aorta, oesophagus, thoracic duct, azygos system and sympathetic trunks."
+          },
+          "detailed": "**Boundaries.** The mediastinum is the central interpleural compartment. Its boundaries are the thoracic inlet above, diaphragm below, sternum in front, thoracic vertebral bodies behind and mediastinal pleura on each side.\n\n**Division.** The sternal angle plane (transverse thoracic plane) runs posteriorly to the T4–T5 disc and divides superior from inferior mediastinum. A horizontal plane through the pericardium divides the inferior mediastinum into anterior, middle and posterior parts. The middle mediastinum contains the pericardium and heart.\n\n**Superior mediastinum — key order.** From anterior to posterior, remember thymic tissue, veins, arteries, trachea, oesophagus and thoracic duct, with vagus and phrenic nerves passing through. The exact arrangement is three-dimensional; learn relations on a cross-section as well as a list.\n\n**Middle mediastinum.** Contains fibrous and serous pericardium, heart, roots of great vessels, main bronchi and phrenic nerves with pericardiacophrenic vessels. The phrenic nerves pass anterior to the roots of the lungs; the vagus nerves pass posterior to the roots.\n\n**Posterior mediastinum.** Contains descending thoracic aorta, oesophagus, thoracic duct, azygos and hemiazygos veins, sympathetic trunks and thoracic splanchnic nerves. The oesophagus changes its relation to the aorta as it descends; use cross-sectional anatomy to understand it.\n\n**Applied anatomy.** Mediastinal masses can compress the trachea, oesophagus, SVC or recurrent laryngeal nerve. Widening of the mediastinum on chest imaging requires clinical evaluation. The sternal angle is a surface landmark for the second costal cartilage and the transverse thoracic plane.",
+          "diagram": "<svg viewBox='0 0 640 300' role='img' aria-label='Mediastinum divisions schematic'><rect x='185' y='25' width='270' height='245' rx='18' fill='#f1e8de' stroke='#6e473b' stroke-width='3'/><rect x='205' y='42' width='230' height='82' rx='10' fill='#e6c8a7' stroke='#a78d78'/><rect x='205' y='132' width='230' height='62' rx='10' fill='#d7a18d' stroke='#a78d78'/><rect x='205' y='202' width='230' height='48' rx='10' fill='#c9d7d0' stroke='#a78d78'/><g fill='#291c0e' font-size='16' font-weight='600'><text x='255' y='88'>Superior</text><text x='260' y='168'>Middle</text><text x='255' y='232'>Posterior</text></g><g fill='#6e473b' font-size='12'><text x='35' y='82'>Thoracic inlet</text><text x='475' y='168'>Heart / pericardium</text><text x='475' y='235'>Oesophagus, aorta, duct</text></g><path d='M145 78 L200 78 M435 164 L470 164 M435 225 L470 225' stroke='#6e473b' stroke-width='2'/></svg>",
+          "quiz": [
+            {
+              "q": "The transverse thoracic plane used to divide superior and inferior mediastinum passes through which landmark pair?",
+              "options": [
+                "Xiphisternal joint and T9",
+                "Sternal angle and T4–T5 disc",
+                "Jugular notch and T1",
+                "Costal margin and T12"
+              ],
+              "answer": 1,
+              "why": "The plane of the sternal angle reaches the T4–T5 intervertebral disc."
+            },
+            {
+              "q": "Which nerve passes anterior to the root of the lung?",
+              "options": [
+                "Vagus",
+                "Phrenic",
+                "Sympathetic trunk",
+                "Greater splanchnic"
+              ],
+              "answer": 1,
+              "why": "The phrenic nerve descends anterior to the lung root; the vagus passes posterior to it."
+            },
+            {
+              "q": "Which structure is a content of the posterior mediastinum?",
+              "options": [
+                "Ascending aorta",
+                "Thymus",
+                "Thoracic duct",
+                "Right atrium"
+              ],
+              "answer": 2,
+              "why": "The thoracic duct ascends through the posterior mediastinum."
+            },
+            {
+              "q": "The middle mediastinum contains which major structure?",
+              "options": [
+                "Heart within pericardium",
+                "Thoracic sympathetic trunk",
+                "Most of oesophagus",
+                "Thymus only"
+              ],
+              "answer": 0,
+              "why": "The heart and pericardium define the middle mediastinum."
+            }
+          ],
+          "references": [
+            "B.D. Chaurasia, Human Anatomy, Volume 1: Thorax",
+            "Cunningham's Manual of Practical Anatomy, Thorax",
+            "NMC competency-based undergraduate curriculum for Anatomy"
+          ]
+        },
+        {
+          "id": "abdomen-anterior-wall",
+          "title": "Abdomen: anterior abdominal wall and inguinal canal",
+          "system": "Abdomen and pelvis",
+          "viva": {
+            "name": "Anterior abdominal wall and inguinal canal",
+            "organSystem": "Abdominal wall; digestive and urogenital regions",
+            "function": "The anterior abdominal wall protects and supports abdominal viscera, helps maintain intra-abdominal pressure, assists trunk movement and forced expiration. The inguinal canal transmits the spermatic cord in males or round ligament of uterus in females, along with the ilioinguinal nerve.",
+            "holotopy": "The anterior abdominal wall forms the anterolateral boundary of the abdominal cavity, extending from the xiphoid process and costal margins to the pubic symphysis, pubic crest and inguinal ligaments.",
+            "syntopy": "Deep to the wall lie parietal peritoneum and abdominal viscera. The rectus muscles lie in the rectus sheath. The inguinal canal runs obliquely through the lower anterior abdominal wall, above the medial half of the inguinal ligament.",
+            "skeletopy": "The wall is related superiorly to the xiphoid and costal cartilages, laterally to the iliac crests, and inferiorly to the pubic crest and symphysis. The deep inguinal ring lies about 1.25 cm above the midpoint of the inguinal ligament; the superficial ring is superomedial to the pubic tubercle.",
+            "externalStructure": "Layers from superficial to deep: skin, superficial fascia (fatty Camper and membranous Scarpa layers), muscles/aponeuroses, transversalis fascia, extraperitoneal fat and parietal peritoneum. Muscles include external oblique, internal oblique, transversus abdominis and rectus abdominis, with pyramidalis variably present.",
+            "internalStructure": "The inguinal canal has an anterior wall (external oblique aponeurosis, reinforced laterally by internal oblique), posterior wall (transversalis fascia, reinforced medially by conjoint tendon), roof (arching fibres of internal oblique and transversus abdominis) and floor (inguinal ligament, with lacunar ligament medially). The deep ring is an opening in transversalis fascia; the superficial ring is an opening in external oblique aponeurosis."
+          },
+          "detailed": "**Layers of the anterior abdominal wall.** From superficial to deep: skin; superficial fascia (fatty Camper layer and membranous Scarpa layer); muscles and aponeuroses; transversalis fascia; extraperitoneal connective tissue/fat; parietal peritoneum. Scarpa fascia continues into the perineum as Colles fascia and attaches to fascia lata below the inguinal ligament, limiting spread of some fluid collections.\n\n**Muscles.** External oblique fibres run inferomedially; internal oblique fibres run superomedially; transversus abdominis fibres run mainly horizontally. Rectus abdominis runs vertically within the rectus sheath. The linea alba is the midline raphe. The arcuate line marks the inferior limit of the posterior rectus sheath (with anatomical variation).\n\n**Rectus sheath.** Above the costal margin, the rectus lies mainly on the thoracic wall. Between the costal margin and arcuate line, the aponeuroses of internal oblique split around rectus; external oblique and anterior internal oblique form the anterior layer, while posterior internal oblique and transversus aponeurosis form the posterior layer. Below the arcuate line, all three aponeuroses pass anterior to rectus, leaving transversalis fascia posteriorly.\n\n**Inguinal canal.** It is about 4 cm long and runs inferomedially from the deep ring to the superficial ring. The deep ring is an opening in transversalis fascia, lateral to the inferior epigastric vessels. The superficial ring is a triangular gap in external oblique aponeurosis, superomedial to the pubic tubercle. Contents: spermatic cord in males or round ligament in females, plus the ilioinguinal nerve (which enters the canal through the abdominal wall and exits the superficial ring; it does not pass through the deep ring).\n\n**Hernias.** An indirect inguinal hernia enters the deep ring lateral to inferior epigastric vessels and may traverse the canal. A direct inguinal hernia pushes through a weakened posterior wall medial to the inferior epigastric vessels, within Hesselbach's triangle. Boundaries of Hesselbach's triangle: rectus abdominis (medial), inferior epigastric vessels (lateral), inguinal ligament (inferior).",
+          "diagram": "<svg viewBox='0 0 640 280' role='img' aria-label='Inguinal canal and abdominal wall schematic'><rect x='95' y='35' width='450' height='205' rx='14' fill='#f4eee6' stroke='#6e473b' stroke-width='3'/><path d='M145 85 L495 85' stroke='#b77c50' stroke-width='12' stroke-linecap='round'/><path d='M180 190 Q310 115 455 190' stroke='#6e473b' stroke-width='9' fill='none'/><circle cx='450' cy='95' r='9' fill='#6e473b'/><circle cx='205' cy='185' r='9' fill='#6e473b'/><path d='M450 95 Q330 65 205 185' stroke='#b77c50' stroke-width='7' fill='none' stroke-dasharray='9 5'/><g fill='#291c0e' font-size='14' font-weight='600'><text x='405' y='65'>Deep ring</text><text x='105' y='215'>Superficial ring</text><text x='245' y='255'>Inguinal canal</text></g></svg>",
+          "quiz": [
+            {
+              "q": "An indirect inguinal hernia enters the deep inguinal ring in relation to the inferior epigastric vessels. Which relation is correct?",
+              "options": [
+                "Medial",
+                "Lateral",
+                "Anterior",
+                "Inferior"
+              ],
+              "answer": 1,
+              "why": "The deep ring lies lateral to the inferior epigastric vessels; indirect hernias are lateral to these vessels."
+            },
+            {
+              "q": "Which nerve is a content of the inguinal canal but does not enter through the deep ring?",
+              "options": [
+                "Genital branch of genitofemoral nerve",
+                "Ilioinguinal nerve",
+                "Femoral branch of genitofemoral nerve",
+                "Obturator nerve"
+              ],
+              "answer": 1,
+              "why": "The ilioinguinal nerve pierces the internal oblique and enters the canal partway along; it does not pass through the deep ring."
+            },
+            {
+              "q": "Below the arcuate line, what forms the posterior wall of the rectus compartment?",
+              "options": [
+                "Posterior layer of internal oblique",
+                "Aponeurosis of transversus abdominis",
+                "Transversalis fascia",
+                "External oblique aponeurosis"
+              ],
+              "answer": 2,
+              "why": "Below the arcuate line all three flat-muscle aponeuroses pass anterior to rectus; transversalis fascia remains posterior."
+            },
+            {
+              "q": "Which structure forms the medial boundary of Hesselbach's triangle?",
+              "options": [
+                "Inferior epigastric vessels",
+                "Rectus abdominis",
+                "Inguinal ligament",
+                "Pectineal ligament"
+              ],
+              "answer": 1,
+              "why": "The medial boundary is the lateral edge of rectus abdominis; inferior epigastric vessels are lateral and inguinal ligament inferior."
+            }
+          ],
+          "references": [
+            "B.D. Chaurasia, Human Anatomy, Volume 2: Abdomen and Pelvis",
+            "Vishram Singh, Textbook of Anatomy, Abdomen and Lower Limb",
+            "NMC competency-based undergraduate curriculum for Anatomy"
+          ]
+        }
+      ]
+    }
+  ],
+  "sourcePolicy": "Notes are independently written summaries, not reproductions of textbook passages or atlas plates. Use Netter's Atlas for visual cross-checking, B.D. Chaurasia and Vishram Singh for Indian regional/dissection emphasis, Cunningham's Manual for dissection sequence, and Gray's/Snell's for deeper relations and clinical correlation. Original simplified diagrams are used here; no copyrighted atlas plates are copied."
+}
